@@ -1,10 +1,14 @@
 User-agent: *
 Allow: /$
-Allow: /ProvSec2024/
-Allow: /ProvSec2024/index.html
-Allow: /ProvSec2024/cfp.html
-Allow: /ProvSec2024/committee.html
-Allow: /ProvSec2024/venue.html
+Allow: /ProvSec2026/
+Allow: /ProvSec2026/index.html
+Allow: /ProvSec2026/cfp.html
+Allow: /ProvSec2026/committee.html
+Allow: /ProvSec2026/registration.html
+Allow: /ProvSec2026/accepted-papers.html
+Allow: /ProvSec2026/program.html
+Allow: /ProvSec2026/venue.html
+Allow: /ProvSec2026/keynotes.html
 
 Disallow: /private/
 Disallow: /admin/

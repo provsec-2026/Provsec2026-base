@@ -19,7 +19,6 @@ $(document).ready(function () {
       // Set title, subtitle, location, date, and hoster to HTML by id
       document.getElementById("title").innerText = index_json["title"];
       document.getElementById("subtitle").innerText = index_json["subtitle"];
-      document.getElementById("location").innerText = index_json["location"];
       document.getElementById("date").innerText = index_json["date"];
       document.getElementById("hoster").innerText = index_json["location"];
     })

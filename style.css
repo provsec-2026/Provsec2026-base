@@ -92,3 +92,30 @@ h3,
 h5 {
   font-family: "Times New Roman", Times, serif;
 }
+
+/* Committee page: match slide style (serif title + sans-serif dark blue card text) */
+.committee-page .committee-section-title,
+.committee-page h2.fw-bold,
+.committee-page p.h2.fw-bold {
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-weight: bold;
+  color: #333333;
+}
+
+.committee-page .committee-card {
+  border: 1px solid #e9ecef;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.committee-page .committee-card .fw-bold,
+.committee-page .committee-card .text-body {
+  color: #003366;
+  font-weight: bold;
+  font-family: inherit;
+}
+
+/* General Co-Chairs cards: same sans-serif dark blue for name & affiliation */
+.committee-page .row.g-0.border.rounded .text-primary-emphasis {
+  color: #003366 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}

@@ -16,6 +16,8 @@ $(document).ready(function () {
     .done(function (config) {
       // Define a function to process committee data
       function processCommitteeData(data, containerNameId, containerOrgId) {
+        document.getElementById(containerNameId).innerHTML = "";
+        document.getElementById(containerOrgId).innerHTML = "";
         data.forEach((member) => {
           const {
             "First Name": fName,
@@ -23,10 +25,8 @@ $(document).ready(function () {
             Affiliation: affiliation,
             Country: country,
           } = member;
-          const name = `${fName} ${lName}`;
-          const org_name = `${affiliation}, ${country}`;
-          //   const info = `${fName} ${lName}, ${affiliation}, ${country}`;
-
+          const name = `${fName} ${lName}`.trim();
+          const org_name = affiliation && country ? `${affiliation}, ${country}` : (affiliation || country || "");
           const p = document.createElement("p");
           p.className = "h4 mb-1";
           p.innerText = name;
@@ -55,21 +55,28 @@ $(document).ready(function () {
       //     "org_committee_name",
       //     "org_committee_org"
       //   );
-      processCommitteeData(
-        committeeJson["publication_co_chairs"] || [],
-        "publication_co_chairs_name",
-        "publication_co_chairs_org"
-      );
-      processCommitteeData(
-        committeeJson["publicity_co_chairs"] || [],
-        "publicity_co_chairs_name",
-        "publicity_co_chairs_org"
-      );
-      processCommitteeData(
-        committeeJson["web_chairs"] || [],
-        "web_chairs_name",
-        "web_chairs_org"
-      );
+      // Publication Chair, Publicity Co-Chairs, Web Master are now static card layout in HTML
+      if (document.getElementById("publication_co_chairs_name")) {
+        processCommitteeData(
+          committeeJson["publication_co_chairs"] || [],
+          "publication_co_chairs_name",
+          "publication_co_chairs_org"
+        );
+      }
+      if (document.getElementById("publicity_co_chairs_name")) {
+        processCommitteeData(
+          committeeJson["publicity_co_chairs"] || [],
+          "publicity_co_chairs_name",
+          "publicity_co_chairs_org"
+        );
+      }
+      if (document.getElementById("web_chairs_name")) {
+        processCommitteeData(
+          committeeJson["web_chairs"] || [],
+          "web_chairs_name",
+          "web_chairs_org"
+        );
+      }
     })
     .fail(function (jqxhr, textStatus, error) {
       console.log("Error reading JSON file: " + error);

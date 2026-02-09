@@ -8,29 +8,49 @@
 
 
 <url>
-  <loc>https://provsec2024.github.io/ProvSec2024/</loc>
-  <lastmod>2024-04-15T05:55:19+00:00</lastmod>
+  <loc>https://provsec2026.github.io/ProvSec2026/</loc>
+  <lastmod>2026-01-29</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://provsec2024.github.io/ProvSec2024/cfp.html</loc>
-  <lastmod>2024-04-15T05:55:19+00:00</lastmod>
+  <loc>https://provsec2026.github.io/ProvSec2026/index.html</loc>
+  <lastmod>2026-01-29</lastmod>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://provsec2026.github.io/ProvSec2026/cfp.html</loc>
+  <lastmod>2026-01-29</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://provsec2024.github.io/ProvSec2024/committee.html</loc>
-  <lastmod>2024-04-15T05:55:19+00:00</lastmod>
+  <loc>https://provsec2026.github.io/ProvSec2026/committee.html</loc>
+  <lastmod>2026-01-29</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://provsec2024.github.io/ProvSec2024/venue.html</loc>
-  <lastmod>2024-04-15T05:55:19+00:00</lastmod>
+  <loc>https://provsec2026.github.io/ProvSec2026/registration.html</loc>
+  <lastmod>2026-01-29</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://provsec2024.github.io/ProvSec2024/index.html</loc>
-  <lastmod>2024-04-15T05:55:19+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://provsec2026.github.io/ProvSec2026/accepted-papers.html</loc>
+  <lastmod>2026-01-29</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://provsec2026.github.io/ProvSec2026/program.html</loc>
+  <lastmod>2026-01-29</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://provsec2026.github.io/ProvSec2026/venue.html</loc>
+  <lastmod>2026-01-29</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://provsec2026.github.io/ProvSec2026/keynotes.html</loc>
+  <lastmod>2026-01-29</lastmod>
+  <priority>0.80</priority>
 </url>
 
 

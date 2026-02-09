@@ -1,304 +1,7 @@
 {
   "committee": {
-    "program_committee": [
-      {
-        "First Name": "Joseph",
-        "Last Name": "Liu",
-        "Affiliation": "Monash University",
-        "Country": "Australia"
-      },
-      {
-        "First Name": "Xingye",
-        "Last Name": "Lu",
-        "Affiliation": "The Hong Kong Polytechnic University",
-        "Country": "Hong Kong SAR"
-      },
-      {
-        "First Name": "Fangguo",
-        "Last Name": "Zhang",
-        "Affiliation": "Sun Yat-sen University",
-        "Country": "China"
-      },
-      {
-        "First Name": "Mingwu",
-        "Last Name": "Zhang",
-        "Affiliation": "Hubei University of Technology",
-        "Country": "China"
-      },
-      {
-        "First Name": "Nada",
-        "Last Name": "El Kassem",
-        "Affiliation": "University of Surrey",
-        "Country": "UK"
-      },
-      {
-        "First Name": "Khoa",
-        "Last Name": "Nguyen",
-        "Affiliation": "University of Wollongong",
-        "Country": "Australia"
-      },
-      {
-        "First Name": "Liang",
-        "Last Name": "Zhao",
-        "Affiliation": "Sichuan University",
-        "Country": "China"
-      },
-      {
-        "First Name": "Liqun",
-        "Last Name": "Chen",
-        "Affiliation": "University of Surrey",
-        "Country": "UK"
-      },
-      {
-        "First Name": "Daniel",
-        "Last Name": "Slamanig",
-        "Affiliation": "UniversitÃ¤t der Bundeswehr MÃ¼nchen",
-        "Country": "Germany"
-      },
-      {
-        "First Name": "Xiaoning",
-        "Last Name": "Liu",
-        "Affiliation": "RMIT University",
-        "Country": "Australia"
-      },
-      {
-        "First Name": "Koutarou",
-        "Last Name": "Suzuki",
-        "Affiliation": "Toyohashi University of Technology",
-        "Country": "Japan"
-      },
-      {
-        "First Name": "Xianhui",
-        "Last Name": "Lu",
-        "Affiliation": "Chinese Academy of Sciences",
-        "Country": "China"
-      },
-      {
-        "First Name": "Yangguang",
-        "Last Name": "Tian",
-        "Affiliation": "University of Surrey",
-        "Country": "UK"
-      },
-      {
-        "First Name": "Keita",
-        "Last Name": "Emura",
-        "Affiliation": "Kanazawa University",
-        "Country": "Japan"
-      },
-      {
-        "First Name": "Dongxi",
-        "Last Name": "Liu",
-        "Affiliation": "Data 61",
-        "Country": "Australia"
-      },
-      {
-        "First Name": "Xinyi",
-        "Last Name": "Huang",
-        "Affiliation": "Hong Kong University of Science and Technology",
-        "Country": "China"
-      },
-      {
-        "First Name": "Jie",
-        "Last Name": "Chen",
-        "Affiliation": "East China Normal University",
-        "Country": "China"
-      },
-      {
-        "First Name": "Willy",
-        "Last Name": "Susilo",
-        "Affiliation": "University of Wollongong",
-        "Country": "Australia"
-      },
-      {
-        "First Name": "Hui",
-        "Last Name": "Cui",
-        "Affiliation": "Monash University",
-        "Country": "Australia"
-      },
-      {
-        "First Name": "Shabnam",
-        "Last Name": "Kasra Kermanshahi",
-        "Affiliation": "UNSW Canberra",
-        "Country": "Australia"
-      },
-      {
-        "First Name": "Cheng-Kang",
-        "Last Name": "Chu",
-        "Affiliation": "Huawei",
-        "Country": "Singapore"
-      },
-      {
-        "First Name": "Haiyang",
-        "Last Name": "Xue",
-        "Affiliation": "The Hong Kong Polytechnic University",
-        "Country": "Hong Kong SAR"
-      },
-      {
-        "First Name": "Shi-Feng",
-        "Last Name": "Sun",
-        "Affiliation": "Shanghai Jiao Tong University",
-        "Country": "China"
-      },
-      {
-        "First Name": "Lei",
-        "Last Name": "Zhang",
-        "Affiliation": "East China Normal University",
-        "Country": "China"
-      },
-      {
-        "First Name": "Guomin",
-        "Last Name": "Yang",
-        "Affiliation": "Singapore Management University",
-        "Country": "Singapore"
-      },
-      {
-        "First Name": "Yang",
-        "Last Name": "Li",
-        "Affiliation": "The University of Electro-Communications",
-        "Country": "Japan"
-      },
-      {
-        "First Name": "Junqing",
-        "Last Name": "Gong",
-        "Affiliation": "East China Normal University",
-        "Country": "China"
-      },
-      {
-        "First Name": "Jinguang",
-        "Last Name": "Han",
-        "Affiliation": "Southeast University",
-        "Country": "China"
-      },
-      {
-        "First Name": "Yuntao",
-        "Last Name": "Wang",
-        "Affiliation": "The University of Electro-Communications",
-        "Country": "Japan"
-      },
-      {
-        "First Name": "Kirill",
-        "Last Name": "Morozov",
-        "Affiliation": "University of North Texas",
-        "Country": "US"
-      },
-      {
-        "First Name": "Shi",
-        "Last Name": "Bai",
-        "Affiliation": "Florida Atlantic University",
-        "Country": "US"
-      },
-      {
-        "First Name": "Fagen",
-        "Last Name": "Li",
-        "Affiliation": "University of Electronic Science and Technology of China",
-        "Country": "China"
-      },
-      {
-        "First Name": "Olivier",
-        "Last Name": "Sanders",
-        "Affiliation": "Orange Labs",
-        "Country": "France"
-      },
-      {
-        "First Name": "Atsushi",
-        "Last Name": "Takayasu",
-        "Affiliation": "The University of Tokyo",
-        "Country": "Japan"
-      },
-      {
-        "First Name": "Peng",
-        "Last Name": "Xu",
-        "Affiliation": "Huazhong University of Science and Technology",
-        "Country": "China"
-      },
-      {
-        "First Name": "Zhe",
-        "Last Name": "Xia",
-        "Affiliation": "Wuhan University of Technology",
-        "Country": "China"
-      },
-      {
-        "First Name": "Elena",
-        "Last Name": "Andreeva",
-        "Affiliation": "TU Wien",
-        "Country": "Austria"
-      },
-      {
-        "First Name": "Zuoxia",
-        "Last Name": "Yu",
-        "Affiliation": "University of Wollongong",
-        "Country": "Australia"
-      },
-      {
-        "First Name": "Yannan",
-        "Last Name": "Li",
-        "Affiliation": "University of Wollongong",
-        "Country": "Australia"
-      },
-      {
-        "First Name": "Sabyasachi",
-        "Last Name": "Karati",
-        "Affiliation": "Indian Statistical Institute",
-        "Country": "India"
-      },
-      {
-        "First Name": "Lei",
-        "Last Name": "Wang",
-        "Affiliation": "Shanghai Jiao Tong University",
-        "Country": "China"
-      },
-      {
-        "First Name": "Baodong",
-        "Last Name": "Qin",
-        "Affiliation": "Xi'an University of Posts and Telecommunications",
-        "Country": "China"
-      },
-      {
-        "First Name": "Man Ho",
-        "Last Name": "Au",
-        "Affiliation": "The Hong Kong Polytechnic University",
-        "Country": "Hong Kong SAR"
-      },
-      {
-        "First Name": "Yu",
-        "Last Name": "Chen",
-        "Affiliation": "Shandong University",
-        "Country": "China"
-      },
-      {
-        "First Name": "Guang",
-        "Last Name": "Gong",
-        "Affiliation": "University of Waterloo",
-        "Country": "Canada"
-      },
-      {
-        "First Name": "Zhen",
-        "Last Name": "Liu",
-        "Affiliation": "Shanghai Jiao Tong University",
-        "Country": "China"
-      }
-    ],
+    "program_committee": [],
     "publication_co_chairs": [
-      {
-        "First Name": "Shi-Feng",
-        "Last Name": "Sun",
-        "Affiliation": "Shanghai Jiao Tong University",
-        "Country": "China"
-      },
-      {
-        "First Name": "Xiaoning",
-        "Last Name": "Liu",
-        "Affiliation": "RMIT",
-        "Country": "Australia"
-      }
-    ],
-    "publicity_co_chairs": [
-      {
-        "First Name": "Cong",
-        "Last Name": "Zuo",
-        "Affiliation": "Beijing Institute of Technology",
-        "Country": "China"
-      },
       {
         "First Name": "Shujie",
         "Last Name": "Cui",
@@ -306,12 +9,26 @@
         "Country": "Australia"
       }
     ],
+    "publicity_co_chairs": [
+      {
+        "First Name": "Junaid",
+        "Last Name": "Haseeb",
+        "Affiliation": "University of Waikato",
+        "Country": "New Zealand"
+      },
+      {
+        "First Name": "Janet Hyunjae",
+        "Last Name": "Kang",
+        "Affiliation": "The University of Queensland",
+        "Country": "Australia"
+      }
+    ],
     "web_chairs": [
       {
-        "First Name": "Xiangwen",
-        "Last Name": "Yang",
-        "Affiliation": "Monash University",
-        "Country": "Australia"
+        "First Name": "Ruichen",
+        "Last Name": "Huang",
+        "Affiliation": "University of Canterbury",
+        "Country": "New Zealand"
       }
     ]
   }
