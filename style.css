@@ -82,6 +82,16 @@
   align-items: center;
 }
 
+/* Index page: ensure main content (dates, location) is black for readability */
+.index-hero .col.p-4 h1,
+.index-hero .col.p-4 h2,
+.index-hero #title,
+.index-hero #subtitle,
+.index-hero #date,
+.index-hero #hoster {
+  color: #000 !important;
+}
+
 /* Set font for h1 */
 a,
 p,
