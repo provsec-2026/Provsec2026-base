@@ -21,6 +21,8 @@ $(document).ready(function () {
       document.getElementById("cfp_title").innerText = cfp_json["title"];
       document.getElementById("cfp_instruction1").innerText =
         cfp_json["cfp_instruction1"];
+      document.getElementById("cfp_sub_date").innerHTML =
+  'Paper Submission: <span style="color: red;"><s>31 May, 2026 (AoE)</s></span> <strong>15 June, 2026 (AoE)</strong> (Firm Deadline)';
       document.getElementById("cfp_lncs_url").href = cfp_json["cfp_lncs_url"];
       document.getElementById("cfp_lncs_url").innerText =
         cfp_json["cfp_lncs_url"];
