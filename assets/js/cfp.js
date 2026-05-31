@@ -26,8 +26,6 @@ $(document).ready(function () {
         cfp_json["cfp_lncs_url"];
       document.getElementById("cfp_instruction2").innerText =
         cfp_json["cfp_instruction2"];
-      document.getElementById("cfp_sub_date").innerText =
-        "Paper Submission: " + cfp_json["sub_date"];
       document.getElementById("cfp_url").href = cfp_json["cfp_url"];
       document.getElementById("cfp_url").innerText = cfp_json["cfp_url"];
       document.getElementById("cfp_notification_date").innerText =
