@@ -33,7 +33,7 @@ $(document).ready(function () {
               : affiliation || country || "";
 
           const item = document.createElement("div");
-          item.className = "committee-pc-member";
+          item.className = "committee-pc-row";
 
           const nameEl = document.createElement("div");
           nameEl.className = "committee-member-name";
@@ -57,33 +57,6 @@ $(document).ready(function () {
         a["Last Name"].localeCompare(b["Last Name"])
       );
       renderProgramCommittee(program_committee || []);
-      //   processCommitteeData(
-      //     committeeJson["org_committee"] || [],
-      //     "org_committee_name",
-      //     "org_committee_org"
-      //   );
-      // Publication Chair, Publicity Co-Chairs, Web Master are now static card layout in HTML
-      if (document.getElementById("publication_co_chairs_name")) {
-        processCommitteeData(
-          committeeJson["publication_co_chairs"] || [],
-          "publication_co_chairs_name",
-          "publication_co_chairs_org"
-        );
-      }
-      if (document.getElementById("publicity_co_chairs_name")) {
-        processCommitteeData(
-          committeeJson["publicity_co_chairs"] || [],
-          "publicity_co_chairs_name",
-          "publicity_co_chairs_org"
-        );
-      }
-      if (document.getElementById("web_chairs_name")) {
-        processCommitteeData(
-          committeeJson["web_chairs"] || [],
-          "web_chairs_name",
-          "web_chairs_org"
-        );
-      }
     })
     .fail(function (jqxhr, textStatus, error) {
       console.log("Error reading JSON file: " + error);
