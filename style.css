@@ -124,8 +124,52 @@ h5 {
   font-family: inherit;
 }
 
-/* General Co-Chairs cards: same sans-serif dark blue for name & affiliation */
-.committee-page .row.g-0.border.rounded .text-primary-emphasis {
-  color: #003366 !important;
+/* Committee member name vs affiliation typography */
+.committee-page .committee-member-name,
+.committee-page .row.g-0.border.rounded strong:first-of-type {
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #003366;
+  display: block;
+  margin-bottom: 0.35rem;
+  line-height: 1.3;
+}
+
+.committee-page .committee-member-affiliation,
+.committee-page .row.g-0.border.rounded strong:last-of-type {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #5c5c5c;
+  display: block;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.committee-page .row.g-0.border.rounded .col {
+  padding: 1.25rem 1.5rem !important;
+}
+
+/* Program Committee list */
+.committee-page .committee-pc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 0.25rem 2rem;
+  margin-top: 0.5rem;
+}
+
+.committee-page .committee-pc-member {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.committee-page .committee-pc-member .committee-member-name {
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
+
+.committee-page .committee-pc-member .committee-member-affiliation {
+  font-size: 0.9rem;
+  color: #666666;
 }

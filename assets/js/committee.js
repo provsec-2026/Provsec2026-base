@@ -15,9 +15,10 @@ $(document).ready(function () {
   $.getJSON("config/committee.json", { mode: "no-cors" })
     .done(function (config) {
       // Define a function to process committee data
-      function processCommitteeData(data, containerNameId, containerOrgId) {
-        document.getElementById(containerNameId).innerHTML = "";
-        document.getElementById(containerOrgId).innerHTML = "";
+      function renderProgramCommittee(data) {
+        const container = document.getElementById("program_committee_list");
+        if (!container) return;
+        container.innerHTML = "";
         data.forEach((member) => {
           const {
             "First Name": fName,
@@ -26,15 +27,25 @@ $(document).ready(function () {
             Country: country,
           } = member;
           const name = `${fName} ${lName}`.trim();
-          const org_name = affiliation && country ? `${affiliation}, ${country}` : (affiliation || country || "");
-          const p = document.createElement("p");
-          p.className = "h4 mb-1";
-          p.innerText = name;
-          document.getElementById(containerNameId).appendChild(p);
-          const p2 = document.createElement("p");
-          p2.className = "h4 mb-1";
-          p2.innerText = org_name;
-          document.getElementById(containerOrgId).appendChild(p2);
+          const org_name =
+            affiliation && country
+              ? `${affiliation}, ${country}`
+              : affiliation || country || "";
+
+          const item = document.createElement("div");
+          item.className = "committee-pc-member";
+
+          const nameEl = document.createElement("div");
+          nameEl.className = "committee-member-name";
+          nameEl.innerText = name;
+
+          const orgEl = document.createElement("div");
+          orgEl.className = "committee-member-affiliation";
+          orgEl.innerText = org_name;
+
+          item.appendChild(nameEl);
+          item.appendChild(orgEl);
+          container.appendChild(item);
         });
       }
 
@@ -45,11 +56,7 @@ $(document).ready(function () {
       program_committee.sort((a, b) =>
         a["Last Name"].localeCompare(b["Last Name"])
       );
-      processCommitteeData(
-        program_committee || [],
-        "program_committee_name",
-        "program_committee_org"
-      );
+      renderProgramCommittee(program_committee || []);
       //   processCommitteeData(
       //     committeeJson["org_committee"] || [],
       //     "org_committee_name",
