@@ -6,19 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Join ProvSec 2026, the 20th international conference on provable and practical security, in Queenstown, New Zealand. Explore the latest in cybersecurity research and innovations.">
     <meta name="keywords" content="ProvSec2026, ProvSec 2026, Provable Security Conference 2026, Cybersecurity Research Conference, Security Conference New Zealand, ProvSec Queenstown" />
-    <style>
-        .hoverbox {
-            display: inline-block;
-            overflow: hidden;
-        }
-
-        .hoverbox img {
-            min-width: 260px; /* Minimum width for the image */
-            min-height: 260px; /* Minimum height for the image */
-            max-width: 100%; /* Responsive width */
-            height: auto; /* Maintain aspect ratio */
-        }
-    </style>
     <meta
       name="author"
       content="ProvSec 2026"
@@ -69,12 +56,61 @@
   </div>
 </div>
 
-<main class="container">
+<main class="container keynote-page">
   <div class="row mb-2">
     <div class="col-md-12 mt-3">
       <h2 class="mb-2 fw-bold">Keynotes</h2>
-      <p class="h5 text-body-secondary mb-4">Keynote speakers for ProvSec 2026: To be confirmed.</p>
-      <!-- Past years' keynote details hidden until 2026 speakers are confirmed -->
+      <p class="keynote-intro">ProvSec 2026 keynote speakers. Additional speakers to be announced.</p>
+
+      <article class="keynote-speaker-card">
+        <div class="row align-items-center g-4 mb-4">
+          <div class="col-12 col-md-4 text-center">
+            <div class="keynote-photo-wrap">
+              <img class="img-fluid" src="assets/img/keynotes/JensDietrich.jpg" alt="Associate Professor Jens Dietrich">
+            </div>
+          </div>
+          <div class="col-12 col-md-8 text-center text-md-start">
+            <h3 class="keynote-speaker-name">Associate Professor Jens Dietrich</h3>
+            <p class="keynote-speaker-affiliation">Victoria University of Wellington</p>
+          </div>
+        </div>
+
+        <div class="accordion accordion-flush keynote-accordion" id="jens_dietrich_bio">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="jens_dietrich_bio_heading">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#jens_dietrich_bio_content" aria-expanded="true" aria-controls="jens_dietrich_bio_content">
+                Speaker Biography
+              </button>
+            </h2>
+            <div id="jens_dietrich_bio_content" class="accordion-collapse collapse show" aria-labelledby="jens_dietrich_bio_heading" data-bs-parent="#jens_dietrich_bio">
+              <div class="accordion-body">
+                <p>Jens Dietrich is an Associate Professor at Victoria University of Wellington, New Zealand. He holds an MSc in Mathematics and a PhD in Computer Science from the University of Leipzig, Germany. After completing his studies in 1996, he worked in the software industry across Germany, Switzerland, the United Kingdom, and Namibia before joining Massey University in New Zealand. He moved to Victoria University of Wellington in 2018.</p>
+                <p>His research focuses on software modularisation, software evolution, and static program analysis. He is an executive member of Software Innovation New Zealand (SI^NZ) and collaborates closely with industry partners, particularly Oracle Labs Australia. He currently co-leads a four-year, NZD 7.8 million research programme (2025&ndash;2029) on software supply chain security.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion accordion-flush keynote-accordion mt-3" id="jens_dietrich_talk">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="jens_dietrich_talk_heading">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#jens_dietrich_talk_content" aria-expanded="true" aria-controls="jens_dietrich_talk_content">
+                Beyond Bitwise: A Framework for Verifying the Equivalence of Binaries from Alternative Builds
+              </button>
+            </h2>
+            <div id="jens_dietrich_talk_content" class="accordion-collapse collapse show" aria-labelledby="jens_dietrich_talk_heading" data-bs-parent="#jens_dietrich_talk">
+              <div class="accordion-body">
+                <p><span class="fw-bold">Abstract</span>: Software supply chain attacks &mdash; from SolarWinds and XZ Utils to compromised build pipelines &mdash; have made it critical to verify that software binaries are trustworthy. A natural defence is to independently rebuild open-source projects and compare the resulting binaries, an approach now taken by industry initiatives such as Google's Assured Open Source Software and Oracle's Build-From-Source. In practice, however, binaries rebuilt from identical source code are frequently not bitwise identical, even when they are semantically equivalent. Naive bitwise comparison therefore produces too many false alarms, while establishing full behavioural equivalence is undecidable.</p>
+                <p>In this talk we present a research programme that addresses this challenge. The key notion is binary equivalence levels, inspired by clone detection types, which provides a practical and graded notion of equivalence between binaries produced by different builds. We discuss the notions of soundness and soundiness in this context, and how cryptographic hashes can be used to establish equivalence. We then discuss DALEQ, a proof-of-concept implementation for Java / Maven packages based on souffle datalog. Rules are used not only to describe the semantics of the equivalence relation, but to also provide proofs that allow engineers to assess and establish trust in (non-)equivalence statements. Evaluated on pairs of packages drawn from Maven Central and rebuilt by Oracle and Google, DALEQ significantly outperforms the current state of the art, reducing the manual inspection burden for non-bitwise-identical artifacts.</p>
+                <p>We close by outlining ongoing work that extends this programme in two directions. First, we are generalising the equivalence levels and verification methodology to additional ecosystems where supply chain security concerns are equally pressing but the compilation and packaging models differ substantially. Second, we are exploring AI-based equivalence classifiers that leverage the BinEq benchmark as training and evaluation data, with the goal of learning equivalence relations that go beyond what hand-crafted normalisation rules can express. Together, these efforts aim to establish cross-ecosystem, scalable binary verification as a practical component of modern software supply chain security.</p>
+                <p>Time permitted, we will finally provide a brief overview of ssc-fort, a research program on software supply chain security funded by the NZ Government.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Past years' keynote details hidden -->
       <div style="display: none;" class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <section class="py-2">
             <div class="container border-bottom" data-zanim-xs="{&quot;delay&quot;:0.2}" style="transform: translate(0px, 0px); opacity: 1;">
