@@ -66,37 +66,20 @@
 
     <div class="container">
       <header class="border-bottom lh-1 py-3" id="header"></header>
-      <div class="site-nav py-2 mb-3 border-bottom">
-        <nav class="nav nav-underline site-nav-links">
-          <a class="nav-item nav-link link-body-emphasis" href="index.html">Home</a>
-          <a class="nav-item nav-link link-body-emphasis active" href="cfp.html">Call For Papers</a>
-          <a class="nav-item nav-link link-body-emphasis" href="committee.html">Committees</a>
-          <a class="nav-item nav-link link-body-emphasis" href="registration.html">Registration</a>
-          <a class="nav-item nav-link link-body-emphasis" href="accepted-papers.html">Accepted Papers</a>
-          <a class="nav-item nav-link link-body-emphasis" href="program.html">Program</a>
-          <a class="nav-item nav-link link-body-emphasis" href="venue.html">Venue</a>
-          <a class="nav-item nav-link link-body-emphasis" href="keynotes.html">Keynotes</a>
-        </nav>
-      </div>
+      <div class="site-nav py-2 mb-3 border-bottom" id="site-nav"></div>
     </div>
-    <main class="container">
+    <main class="container cfp-page">
+      <h1 class="cfp-page-title">Call for Papers</h1>
       <div class="row">
         <div class="col-md-12">
-          <div
-            class="row g-0 rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
-          >
-            <div class="col p-4 d-flex flex-column position-static">
-              <p
-                class="h4"
-                style="text-align: justify"
-                id="cfp_description"
-              ></p>
-              <p class="h4" style="text-align: justify" id="cfp_title">
+          <div class="cfp-content">
+              <p class="cfp-lead" id="cfp_description"></p>
+              <p class="cfp-lead" id="cfp_title">
                 Authors are invited to submit original research papers on
                 provable and practical security. Areas of interest include, but
                 are not limited to:
               </p>
-              <ul class="h5">
+              <ul class="cfp-topic-list">
                 <li>Provable security for asymmetric cryptography</li>
                 <li>Provable security for symmetric cryptography</li>
                 <li>Provable security for physical attacks</li>
@@ -122,28 +105,19 @@
                 <li>Lightweight security</li>
                 <li>Cyber-physical security</li>
               </ul>
-              <p class="h3 fw-bold">Instructions for Authors</p>
-              <p
-                class="h4"
-                style="text-align: justify"
-                id="cfp_instruction1"
-              ></p>
-              <p class="h4" style="text-align: justify" id="cfp_lncs">
+              <h2 class="cfp-section-title">Instructions for Authors</h2>
+              <p class="cfp-body" id="cfp_instruction1"></p>
+              <p class="cfp-body" id="cfp_lncs">
                 <a
-                  class="h4 fw-bold"
+                  class="cfp-link fw-semibold"
                   id="cfp_lncs_url"
                   target="_blank"
-                  style="color: blue"
                   href=""
                 ></a>
               </p>
-              <p
-                class="h4"
-                style="text-align: justify"
-                id="cfp_instruction2"
-              ></p>
-              <p class="h4 fw-bold">
-                Authors should submit their paper using this link: <a href="https://easychair.org/conferences/?conf=provsec2026">https://easychair.org/conferences/?conf=provsec2026</a>
+              <p class="cfp-body" id="cfp_instruction2"></p>
+              <p class="cfp-body fw-semibold">
+                Authors should submit their paper using this link: <a class="cfp-link" href="https://easychair.org/conferences/?conf=provsec2026">https://easychair.org/conferences/?conf=provsec2026</a>
               </p> <!--
               <p class="h4" style="text-align: justify" id="cfp_guideline"></p>
               <a
@@ -155,25 +129,25 @@
               >
                 https://easychair.org/my/conference?conf=provsec2026
               </a> -->
-              <p class="h3 fw-bold">Important Dates</p>
-              <ul class="h5">
-                <li>Paper Submission: <span style="color: red;"><s>31 May, 2026 (AoE)</s></span>
+              <h2 class="cfp-section-title">Important Dates</h2>
+              <ul class="cfp-dates-list">
+                <li>Paper Submission: <span class="cfp-date-struck">31 May, 2026 (AoE)</span>
     <strong>15 June, 2026 (AoE)</strong> (Firm Deadline)</li>
                 <li id="cfp_notification_date">Notification: 15 July, 2026</li>
                 <li id="cfp_camera_ready_date">Camera Ready: 31 July, 2026</li>
                 <li id="cfp_conference_date">Conference: 24-26 September, 2026</li>
               </ul>
-              <p class="h4">
+              <p class="cfp-body">
                 Proceedings including all accepted papers will be published in
                 Springer LNCS and will be available at the conference.
               </p>
             </div>
-          </div>
         </div>
       </div>
-      <p class="h3 fw-bold">Journal Publication Opportunity</p>
+      <section class="cfp-journal-section">
+      <h2 class="cfp-section-title">Journal Publication Opportunity</h2>
 
-<p class="h4" style="text-align: justify">
+<p class="cfp-body">
   Welcome to submit the extended versions of ProvSec 2026 papers to the
   journal <strong>Cryptography</strong>. Extended versions should cite
   the original conference paper and contain at least 50% new content
@@ -181,10 +155,12 @@
   use cases). Furthermore, the overlap with the original conference
   paper should not exceed 30% (copy/paste).
 </p>
+      </section>
       <div id="footer"></div>
     </main>
 
     <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/nav.js"></script>
     <script
       src="./assets/js/jquery-3.7.1.min.js"
       crossorigin="anonymous"

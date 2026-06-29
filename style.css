@@ -33,55 +33,106 @@
   fill: currentColor;
 }
 
-/* Site navigation: wrap on narrow viewports so all items stay reachable */
-.site-nav,
-.nav-scroller {
+/* Site navigation: single-row horizontal scroll */
+.site-nav {
   position: relative;
   z-index: 2;
-}
-
-.site-nav .site-nav-links,
-.nav-scroller .nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.2rem 0.4rem;
   width: 100%;
-  padding-bottom: 0.35rem;
-  margin-top: 0;
-  overflow: visible;
-  white-space: normal;
 }
 
-.site-nav .nav-link {
+.site-nav-scroll {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 51, 102, 0.35) transparent;
+}
+
+.site-nav-scroll::-webkit-scrollbar {
+  height: 5px;
+}
+
+.site-nav-scroll::-webkit-scrollbar-thumb {
+  background: rgba(0, 51, 102, 0.3);
+  border-radius: 999px;
+}
+
+.site-nav-scroll-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  width: max-content;
+  min-width: 100%;
+  margin: 0 auto;
+  padding: 0.35rem 0.75rem 0.55rem;
+}
+
+.site-nav-scroll .nav-link {
+  flex: 0 0 auto;
+  font-family: "Times New Roman", Times, serif;
   font-size: 1.05rem;
-  padding: 0.4rem 0.75rem;
+  padding: 0.4rem 0.8rem;
   white-space: nowrap;
   color: #333333;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.site-nav .nav-link:hover,
-.site-nav .nav-link:focus {
+.site-nav-scroll .nav-link:hover,
+.site-nav-scroll .nav-link:focus {
   color: #003366;
 }
 
-.site-nav .nav-link.active {
+.site-nav-scroll .nav-link.active {
   color: #003366;
   font-weight: 600;
+  border-bottom-color: #003366;
 }
 
-@media (min-width: 1200px) {
-  .site-nav .nav-link {
+.site-header-banner {
+  background-image: url("./assets/img/queenstown1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 22%;
+  width: 100%;
+  height: 500px;
+  max-width: 100%;
+}
+
+.site-header-banner-top,
+.site-header-banner-bottom {
+  background-color: rgba(255, 255, 255, 0.78);
+}
+
+.site-header-banner-top {
+  top: 0;
+}
+
+.site-header-banner-bottom {
+  bottom: 0;
+}
+
+@media (min-width: 992px) {
+  .site-nav-scroll .nav-link {
     font-size: 1.08rem;
-    padding: 0.4rem 0.9rem;
+    padding: 0.4rem 0.95rem;
   }
 }
 
 @media (max-width: 575.98px) {
-  .site-nav .nav-link {
-    font-size: 0.92rem;
-    padding: 0.35rem 0.55rem;
+  .site-nav-scroll-inner {
+    justify-content: flex-start;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .site-nav-scroll .nav-link {
+    font-size: 0.95rem;
+    padding: 0.35rem 0.65rem;
   }
 }
 
@@ -326,4 +377,120 @@ h5 {
 
 .keynote-page .keynote-accordion .accordion-body p:last-child {
   margin-bottom: 0;
+}
+
+/* Call for Papers page */
+.cfp-page {
+  padding-top: 0.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.cfp-page-title {
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e3e3e3;
+}
+
+.cfp-content,
+.cfp-journal-section {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.cfp-content {
+  background-color: #fafafa;
+  border: 1px solid #e9ecef;
+  border-radius: 0.5rem;
+  padding: 2rem 2.25rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.04);
+}
+
+.cfp-journal-section {
+  background-color: #f8f9fb;
+  border: 1px solid #e9ecef;
+  border-radius: 0.5rem;
+  padding: 1.75rem 2.25rem 2rem;
+}
+
+.cfp-lead {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: #333333;
+  text-align: justify;
+  margin-bottom: 1.1rem;
+}
+
+.cfp-body {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444444;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+.cfp-section-title {
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: #003366;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cfp-section-title:first-child {
+  margin-top: 0;
+}
+
+.cfp-topic-list,
+.cfp-dates-list {
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: #444444;
+  padding-left: 1.35rem;
+  margin-bottom: 1.25rem;
+}
+
+.cfp-topic-list li,
+.cfp-dates-list li {
+  margin-bottom: 0.35rem;
+}
+
+.cfp-topic-list {
+  columns: 2;
+  column-gap: 2rem;
+}
+
+.cfp-link {
+  color: #003366;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.cfp-link:hover {
+  color: #005599;
+}
+
+.cfp-date-struck {
+  color: #b04040;
+  text-decoration: line-through;
+  margin-right: 0.25rem;
+}
+
+@media (max-width: 767.98px) {
+  .cfp-content,
+  .cfp-journal-section {
+    padding: 1.35rem 1.25rem;
+  }
+
+  .cfp-topic-list {
+    columns: 1;
+  }
+
+  .cfp-page-title {
+    font-size: 1.65rem;
+  }
 }
