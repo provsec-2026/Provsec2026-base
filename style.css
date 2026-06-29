@@ -73,7 +73,8 @@
 .site-nav-scroll .nav-link {
   flex: 0 0 auto;
   font-family: "Times New Roman", Times, serif;
-  font-size: 1.05rem;
+  font-size: 1.05rem !important;
+  font-weight: 400;
   padding: 0.4rem 0.8rem;
   white-space: nowrap;
   color: #333333;
@@ -89,6 +90,7 @@
 
 .site-nav-scroll .nav-link.active {
   color: #003366;
+  font-size: 1.05rem !important;
   font-weight: 600;
   border-bottom-color: #003366;
 }
@@ -103,9 +105,27 @@
   max-width: 100%;
 }
 
+.site-header-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 24, 48, 0.62) 0%,
+    rgba(0, 24, 48, 0.18) 42%,
+    rgba(0, 24, 48, 0.22) 58%,
+    rgba(0, 24, 48, 0.68) 100%
+  );
+  z-index: 1;
+}
+
 .site-header-banner-top,
 .site-header-banner-bottom {
-  background-color: rgba(255, 255, 255, 0.78);
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  text-align: center;
+  padding: 1.75rem 1.5rem;
 }
 
 .site-header-banner-top {
@@ -116,9 +136,40 @@
   bottom: 0;
 }
 
+.site-header-banner-title {
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.55);
+}
+
+.site-header-banner-subtitle,
+.site-header-banner-dates {
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+}
+
+.site-header-banner-subtitle {
+  font-size: clamp(1.25rem, 3vw, 1.85rem);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.site-header-banner-dates {
+  font-size: clamp(1.05rem, 2.5vw, 1.45rem);
+  font-weight: 500;
+  color: #e8f0ff;
+}
+
 @media (min-width: 992px) {
-  .site-nav-scroll .nav-link {
-    font-size: 1.08rem;
+  .site-nav-scroll .nav-link,
+  .site-nav-scroll .nav-link.active {
+    font-size: 1.08rem !important;
     padding: 0.4rem 0.95rem;
   }
 }
@@ -130,8 +181,9 @@
     padding-right: 0.5rem;
   }
 
-  .site-nav-scroll .nav-link {
-    font-size: 0.95rem;
+  .site-nav-scroll .nav-link,
+  .site-nav-scroll .nav-link.active {
+    font-size: 0.95rem !important;
     padding: 0.35rem 0.65rem;
   }
 }
