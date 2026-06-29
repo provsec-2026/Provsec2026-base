@@ -68,31 +68,39 @@
   min-width: 100%;
   margin: 0 auto;
   padding: 0.35rem 0.75rem 0.55rem;
+  font-size: 1.05rem;
+  line-height: 1.4;
 }
 
-.site-nav-scroll .nav-link {
+#site-nav .site-nav-link {
   flex: 0 0 auto;
-  font-family: "Times New Roman", Times, serif;
+  flex-shrink: 0;
+  display: inline-block;
+  font-family: "Times New Roman", Times, serif !important;
   font-size: 1.05rem !important;
-  font-weight: 400;
+  font-weight: 400 !important;
+  line-height: 1.4 !important;
   padding: 0.4rem 0.8rem;
   white-space: nowrap;
-  color: #333333;
-  text-decoration: none;
+  color: #333333 !important;
+  text-decoration: none !important;
   border-bottom: 2px solid transparent;
   transition: color 0.15s ease, border-color 0.15s ease;
+  -webkit-text-size-adjust: 100%;
 }
 
-.site-nav-scroll .nav-link:hover,
-.site-nav-scroll .nav-link:focus {
-  color: #003366;
+#site-nav .site-nav-link:hover,
+#site-nav .site-nav-link:focus {
+  color: #003366 !important;
 }
 
-.site-nav-scroll .nav-link.active {
-  color: #003366;
+#site-nav .site-nav-link.active {
+  color: #003366 !important;
   font-size: 1.05rem !important;
-  font-weight: 600;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
   border-bottom-color: #003366;
+  background: transparent !important;
 }
 
 .site-header-banner {
@@ -167,8 +175,12 @@
 }
 
 @media (min-width: 992px) {
-  .site-nav-scroll .nav-link,
-  .site-nav-scroll .nav-link.active {
+  .site-nav-scroll-inner {
+    font-size: 1.08rem;
+  }
+
+  #site-nav .site-nav-link,
+  #site-nav .site-nav-link.active {
     font-size: 1.08rem !important;
     padding: 0.4rem 0.95rem;
   }
@@ -179,10 +191,11 @@
     justify-content: flex-start;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    font-size: 0.95rem;
   }
 
-  .site-nav-scroll .nav-link,
-  .site-nav-scroll .nav-link.active {
+  #site-nav .site-nav-link,
+  #site-nav .site-nav-link.active {
     font-size: 0.95rem !important;
     padding: 0.35rem 0.65rem;
   }
