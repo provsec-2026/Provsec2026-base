@@ -33,6 +33,14 @@
   fill: currentColor;
 }
 
+/* Wider page layout: use more of the screen than default Bootstrap container */
+.container {
+  width: 100%;
+  max-width: min(96vw, 1840px) !important;
+  padding-left: clamp(1rem, 2vw, 2rem);
+  padding-right: clamp(1rem, 2vw, 2rem);
+}
+
 /* Site navigation: single-row horizontal scroll */
 .site-nav {
   position: relative;
