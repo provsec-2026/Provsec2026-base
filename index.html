@@ -29,7 +29,87 @@
       rel="stylesheet"
     />
     <!-- Custom styles for this template -->
-    <link href="./style.css" rel="stylesheet" />
+    <link href="style.css?v=4" rel="stylesheet" />
+    <style>
+      /* Homepage hero: inline so layout works even if external CSS is cached/missed */
+      .index-hero {
+        position: relative;
+        background-image: url("assets/img/network-security-color-A-blue-gold.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        padding: 3rem 1.5rem 3.5rem;
+        margin-bottom: 2rem;
+        overflow: hidden;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      }
+      .index-hero-overlay {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(to bottom, rgba(0, 8, 24, 0.5) 0%, rgba(0, 12, 32, 0.15) 38%, rgba(0, 12, 32, 0.18) 62%, rgba(0, 8, 24, 0.55) 100%),
+          linear-gradient(to right, rgba(0, 10, 28, 0.25) 0%, transparent 28%, transparent 72%, rgba(0, 10, 28, 0.22) 100%);
+        z-index: 1;
+      }
+      .index-hero-inner { position: relative; z-index: 2; }
+      .index-hero-title {
+        font-family: "Playfair Display", "Times New Roman", Times, serif;
+        font-size: clamp(1.65rem, 4vw, 2.5rem);
+        font-weight: 700;
+        color: #ffffff;
+        text-align: center;
+        line-height: 1.25;
+        text-shadow: 0 2px 20px rgba(0, 0, 0, 0.65), 0 1px 4px rgba(0, 0, 0, 0.5);
+      }
+      .index-hero-subtitle {
+        font-family: "Playfair Display", "Times New Roman", Times, serif;
+        font-size: clamp(1.25rem, 3vw, 1.85rem);
+        font-weight: 600;
+        color: #e8f0ff;
+        text-align: center;
+        text-shadow: 0 2px 16px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.45);
+      }
+      .index-hero-info-card {
+        background: rgba(0, 12, 32, 0.18);
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        border-radius: 0.75rem;
+        padding: 1.75rem 1.25rem;
+        backdrop-filter: blur(1px);
+        -webkit-backdrop-filter: blur(1px);
+      }
+      .index-hero-icon-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 96px;
+        margin-bottom: 0.75rem;
+      }
+      .index-hero-icon {
+        width: 88px;
+        height: 88px;
+        filter: brightness(0) invert(1);
+        opacity: 0.92;
+      }
+      .index-hero-label,
+      .index-hero-value,
+      .index-hero #date,
+      .index-hero #hoster {
+        color: #ffffff !important;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55), 0 1px 3px rgba(0, 0, 0, 0.45);
+      }
+      .index-hero-value {
+        font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+        font-weight: 500;
+        color: #f0f4ff !important;
+      }
+      .index-hero-deadline-title {
+        font-size: clamp(1rem, 2.2vw, 1.35rem);
+        color: #ffffff;
+        text-shadow: 0 2px 14px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.45);
+      }
+      .index-hero-deadline-old { color: #ff8a8a; margin-right: 0.35rem; }
+      .index-hero-deadline-new { color: #f5d76e; font-weight: 600; }
+    </style>
   </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -66,61 +146,61 @@
       </header>
       <!-- Add an full width image at the top of nav bar -->
       <div class="site-nav py-2 mb-3 border-bottom" id="site-nav"></div>
+
+      <section class="index-hero overflow-hidden shadow-lg">
+        <div class="index-hero-overlay" aria-hidden="true"></div>
+        <div class="index-hero-inner">
+          <h1 class="index-hero-title mb-0" id="title">
+            The 20th International Conference on Provable and Practical
+            Security
+          </h1>
+          <h2 class="index-hero-subtitle mt-3" id="subtitle">(ProvSec 2026)</h2>
+
+          <div class="row mt-4 mt-md-5 g-4 align-items-stretch">
+            <div class="col-md-6">
+              <div class="index-hero-info-card h-100 text-center">
+                <div class="index-hero-icon-wrap">
+                  <img
+                    class="index-hero-icon"
+                    src="./assets/icon/calendar-outline/128x128.png"
+                    width="88"
+                    height="88"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <h2 class="index-hero-label fw-bold mb-1">Date:</h2>
+                <h2 class="index-hero-value" id="date">24-26 September 2026</h2>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="index-hero-info-card h-100 text-center">
+                <div class="index-hero-icon-wrap">
+                  <img
+                    class="index-hero-icon index-hero-icon-pin"
+                    src="./assets/icon/location-pin.svg"
+                    width="88"
+                    height="88"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </div>
+                <h2 class="index-hero-label fw-bold mb-1">Location:</h2>
+                <h2 class="index-hero-value" id="hoster">Queenstown, New Zealand</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="index-hero-deadline mt-4 mt-md-5 text-center">
+            <h2 class="index-hero-deadline-title mb-0">
+              Paper Submission:
+              <span class="index-hero-deadline-old"><s>31 May, 2026 (AoE)</s></span>
+              <span class="index-hero-deadline-new">15 June, 2026 (AoE) (Firm Deadline)</span>
+            </h2>
+          </div>
+        </div>
+      </section>
     </div>
-
-    <section class="index-hero">
-      <div class="index-hero-overlay" aria-hidden="true"></div>
-      <div class="container index-hero-inner">
-        <h1 class="index-hero-title mb-0" id="title">
-          The 20th International Conference on Provable and Practical
-          Security
-        </h1>
-        <h2 class="index-hero-subtitle mt-3" id="subtitle">(ProvSec 2026)</h2>
-
-        <div class="row mt-4 mt-md-5 g-4 align-items-stretch">
-          <div class="col-md-6">
-            <div class="index-hero-info-card h-100 text-center">
-              <div class="index-hero-icon-wrap">
-                <img
-                  class="index-hero-icon"
-                  src="./assets/icon/calendar-outline/128x128.png"
-                  width="88"
-                  height="88"
-                  alt=""
-                  aria-hidden="true"
-                />
-              </div>
-              <h2 class="index-hero-label fw-bold mb-1">Date:</h2>
-              <h2 class="index-hero-value" id="date">24-26 September 2026</h2>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="index-hero-info-card h-100 text-center">
-              <div class="index-hero-icon-wrap">
-                <img
-                  class="index-hero-icon index-hero-icon-pin"
-                  src="./assets/icon/location-pin.svg"
-                  width="88"
-                  height="88"
-                  alt=""
-                  aria-hidden="true"
-                />
-              </div>
-              <h2 class="index-hero-label fw-bold mb-1">Location:</h2>
-              <h2 class="index-hero-value" id="hoster">Queenstown, New Zealand</h2>
-            </div>
-          </div>
-        </div>
-
-        <div class="index-hero-deadline mt-4 mt-md-5 text-center">
-          <h2 class="index-hero-deadline-title mb-0">
-            Paper Submission:
-            <span class="index-hero-deadline-old"><s>31 May, 2026 (AoE)</s></span>
-            <span class="index-hero-deadline-new">15 June, 2026 (AoE) (Firm Deadline)</span>
-          </h2>
-        </div>
-      </div>
-    </section>
 
     <main class="container">
       <!-- Video Section -->
