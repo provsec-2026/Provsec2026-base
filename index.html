@@ -65,68 +65,57 @@
       <div class="site-nav py-2 mb-3 border-bottom" id="site-nav"></div>
     </div>
 
-    <main class="container index-hero">
-      <div class="row mb-2">
-        <div class="col-md-12">
-          <div
-            class="row g-0 rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
-          >
-            <div class="col p-4 d-flex flex-column position-static">
-              <h1 class="mb-0 text-dark" id="title">
-                The 20th International Conference on Provable and Practical
-                Security
-              </h1>
-              <!-- Add Calendar to show the Proposed Dates -->
-              <h2 class="mt-3 text-dark" id="subtitle">(ProvSec 2026)</h2>
-              <div class="row mt-5 align-items-start">
-                <div class="col-md-6">
-                  <div class="d-flex justify-content-center align-items-center" style="height: 128px;">
-                    <img
-                      class="bd-placeholder-img"
-                      src="./assets/icon/calendar-outline/128x128.png"
-                      alt="Placeholder"
-                    />
-                  </div>
-                  <div class="text-center mt-3">
-                    <h2 class="fw-bold mb-1 text-dark">Date:</h2>
-                    <h2 class="text-dark" id="date">24-26 September 2026</h2>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="d-flex justify-content-center align-items-center" style="height: 128px;">
-                    <img
-                      class="bd-placeholder-img"
-                      style="width: 128px; height: 128px;"
-                      src="./assets/icon/location-pin.svg"
-                      alt="Placeholder"
-                    />
-                  </div>
-                  <div class="text-center mt-3">
-                    <h2 class="fw-bold mb-1 text-dark">Location:</h2>
-                    <h2 class="text-dark" id="hoster">Queenstown, New Zealand</h2>
-                  </div>
-                </div>
-              </div>
-              <div class="justify-content-center align-items-center mt-5">
-                <h2> Paper Submission:
-        <span style="color: red;"><s>31 May, 2026 (AoE)</s></span>
-        <span style="color: black;">15 June, 2026 (AoE) (Firm Deadline)</span></h2>
-              </div>
-            </div>
+    <section class="index-hero">
+      <div class="index-hero-overlay" aria-hidden="true"></div>
+      <div class="container index-hero-inner">
+        <h1 class="index-hero-title mb-0" id="title">
+          The 20th International Conference on Provable and Practical
+          Security
+        </h1>
+        <h2 class="index-hero-subtitle mt-3" id="subtitle">(ProvSec 2026)</h2>
 
-            <div class="col-auto d-none d-lg-block">
-              <img
-                class="bd-placeholder-img"
-                width="500"
-                height="625"
-                src="./assets/img/home-queenstown.jpg"
-                alt="Queenstown"
-              />
+        <div class="row mt-4 mt-md-5 g-4 align-items-stretch">
+          <div class="col-md-6">
+            <div class="index-hero-info-card h-100 text-center">
+              <div class="index-hero-icon-wrap">
+                <img
+                  class="index-hero-icon"
+                  src="./assets/icon/calendar-outline/128x128.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </div>
+              <h2 class="index-hero-label fw-bold mb-1">Date:</h2>
+              <h2 class="index-hero-value" id="date">24-26 September 2026</h2>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="index-hero-info-card h-100 text-center">
+              <div class="index-hero-icon-wrap">
+                <img
+                  class="index-hero-icon index-hero-icon-pin"
+                  src="./assets/icon/location-pin.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </div>
+              <h2 class="index-hero-label fw-bold mb-1">Location:</h2>
+              <h2 class="index-hero-value" id="hoster">Queenstown, New Zealand</h2>
             </div>
           </div>
         </div>
-      </div>
 
+        <div class="index-hero-deadline mt-4 mt-md-5 text-center">
+          <h2 class="index-hero-deadline-title mb-0">
+            Paper Submission:
+            <span class="index-hero-deadline-old"><s>31 May, 2026 (AoE)</s></span>
+            <span class="index-hero-deadline-new">15 June, 2026 (AoE) (Firm Deadline)</span>
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <main class="container">
       <!-- Video Section -->
       <div class="row mb-4">
         <div class="col-md-12">

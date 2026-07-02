@@ -232,14 +232,137 @@
   align-items: center;
 }
 
-/* Index page: ensure main content (dates, location) is black for readability */
-.index-hero .col.p-4 h1,
-.index-hero .col.p-4 h2,
-.index-hero #title,
-.index-hero #subtitle,
+/* Index page hero: full-width background with overlay content */
+.index-hero {
+  position: relative;
+  background-image: url("./assets/img/network-security-color-A-blue-gold.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 3rem 0 3.5rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.index-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 8, 24, 0.5) 0%,
+      rgba(0, 12, 32, 0.15) 38%,
+      rgba(0, 12, 32, 0.18) 62%,
+      rgba(0, 8, 24, 0.55) 100%
+    ),
+    linear-gradient(
+      to right,
+      rgba(0, 10, 28, 0.25) 0%,
+      transparent 28%,
+      transparent 72%,
+      rgba(0, 10, 28, 0.22) 100%
+    );
+  z-index: 1;
+}
+
+.index-hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.index-hero-title {
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-size: clamp(1.65rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.25;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.65), 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.index-hero-subtitle {
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+  font-size: clamp(1.25rem, 3vw, 1.85rem);
+  font-weight: 600;
+  color: #e8f0ff;
+  text-align: center;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.45);
+}
+
+.index-hero-info-card {
+  background: rgba(0, 12, 32, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 0.75rem;
+  padding: 1.75rem 1.25rem;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.index-hero-icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 96px;
+  margin-bottom: 0.75rem;
+}
+
+.index-hero-icon {
+  width: 88px;
+  height: 88px;
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
+}
+
+.index-hero-icon-pin {
+  width: 88px;
+  height: 88px;
+}
+
+.index-hero-label,
+.index-hero-value,
 .index-hero #date,
 .index-hero #hoster {
-  color: #000 !important;
+  color: #ffffff !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55), 0 1px 3px rgba(0, 0, 0, 0.45);
+}
+
+.index-hero-value {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 500;
+  color: #f0f4ff !important;
+}
+
+.index-hero-deadline-title {
+  font-size: clamp(1rem, 2.2vw, 1.35rem);
+  color: #ffffff;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.45);
+}
+
+.index-hero-deadline-old {
+  color: #ff8a8a;
+  margin-right: 0.35rem;
+}
+
+.index-hero-deadline-new {
+  color: #f5d76e;
+  font-weight: 600;
+}
+
+@media (max-width: 575.98px) {
+  .index-hero {
+    padding: 2.25rem 0 2.75rem;
+  }
+
+  .index-hero-deadline-title {
+    line-height: 1.5;
+  }
+
+  .index-hero-deadline-old,
+  .index-hero-deadline-new {
+    display: block;
+    margin-top: 0.35rem;
+  }
 }
 
 /* Set font for h1 */
