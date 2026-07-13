@@ -41,7 +41,7 @@
     
   </header>
 
-  <div class="site-nav py-2 mb-3 border-bottom" id="site-nav"></div>
+  <div class="site-nav mb-3" id="site-nav"></div>
 </div>
 
 <main class="container keynote-page">
@@ -83,11 +83,12 @@
           <div class="accordion-item">
             <h2 class="accordion-header" id="jens_dietrich_talk_heading">
               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#jens_dietrich_talk_content" aria-expanded="true" aria-controls="jens_dietrich_talk_content">
-                Beyond Bitwise: A Framework for Verifying the Equivalence of Binaries from Alternative Builds
+                Title
               </button>
             </h2>
             <div id="jens_dietrich_talk_content" class="accordion-collapse collapse show" aria-labelledby="jens_dietrich_talk_heading" data-bs-parent="#jens_dietrich_talk">
               <div class="accordion-body">
+                <p class="keynote-talk-title">Beyond Bitwise: A Framework for Verifying the Equivalence of Binaries from Alternative Builds</p>
                 <p><span class="fw-bold">Abstract</span>: Software supply chain attacks &mdash; from SolarWinds and XZ Utils to compromised build pipelines &mdash; have made it critical to verify that software binaries are trustworthy. A natural defence is to independently rebuild open-source projects and compare the resulting binaries, an approach now taken by industry initiatives such as Google's Assured Open Source Software and Oracle's Build-From-Source. In practice, however, binaries rebuilt from identical source code are frequently not bitwise identical, even when they are semantically equivalent. Naive bitwise comparison therefore produces too many false alarms, while establishing full behavioural equivalence is undecidable.</p>
                 <p>In this talk we present a research programme that addresses this challenge. The key notion is binary equivalence levels, inspired by clone detection types, which provides a practical and graded notion of equivalence between binaries produced by different builds. We discuss the notions of soundness and soundiness in this context, and how cryptographic hashes can be used to establish equivalence. We then discuss DALEQ, a proof-of-concept implementation for Java / Maven packages based on souffle datalog. Rules are used not only to describe the semantics of the equivalence relation, but to also provide proofs that allow engineers to assess and establish trust in (non-)equivalence statements. Evaluated on pairs of packages drawn from Maven Central and rebuilt by Oracle and Google, DALEQ significantly outperforms the current state of the art, reducing the manual inspection burden for non-bitwise-identical artifacts.</p>
                 <p>We close by outlining ongoing work that extends this programme in two directions. First, we are generalising the equivalence levels and verification methodology to additional ecosystems where supply chain security concerns are equally pressing but the compilation and packaging models differ substantially. Second, we are exploring AI-based equivalence classifiers that leverage the BinEq benchmark as training and evaluation data, with the goal of learning equivalence relations that go beyond what hand-crafted normalisation rules can express. Together, these efforts aim to establish cross-ecosystem, scalable binary verification as a practical component of modern software supply chain security.</p>
