@@ -32,7 +32,7 @@
     var mount = document.getElementById("site-nav");
     if (!mount) return;
 
-    fetch("partial/nav.html")
+    fetch("partial/nav.html?v=15")
       .then(function (response) {
         if (!response.ok) throw new Error("nav fetch failed");
         return response.text();
