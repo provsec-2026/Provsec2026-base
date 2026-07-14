@@ -131,33 +131,15 @@
               <tr>
                 <td>Option 1</td>
                 <td class="registration-fee">300</td>
-                <td>Reception + Banquet</td>
+                <td>Reception (24 September) + Banquet (26 September)</td>
               </tr>
               <tr>
                 <td>Option 2</td>
                 <td class="registration-fee">600</td>
-                <td>Reception + Banquet + Catering during conference</td>
+                <td>Reception (24 September) + Banquet (26 September) + Catering during conference (24&ndash;26 September)</td>
               </tr>
             </tbody>
           </table>
-        </div>
-
-        <div class="registration-includes">
-          <div class="registration-includes-col">
-            <h4 class="registration-includes-title">Option 1 includes</h4>
-            <ul class="registration-policy-list">
-              <li>Conference Reception (24 September)</li>
-              <li>Conference Banquet (26 September)</li>
-            </ul>
-          </div>
-          <div class="registration-includes-col">
-            <h4 class="registration-includes-title">Option 2 includes</h4>
-            <ul class="registration-policy-list">
-              <li>Conference Reception (24 September)</li>
-              <li>Conference Banquet (26 September)</li>
-              <li>Morning tea, lunch and afternoon tea (24&ndash;26 September)</li>
-            </ul>
-          </div>
         </div>
 
         <p class="registration-note registration-note-footer mb-0">
@@ -174,7 +156,9 @@
             <span class="registration-countdown" id="author-registration-countdown"></span>
           </li>
           <li>
-            <strong>Non-author registration:</strong> 22 September 2026 (AEST)
+            <strong>Non-author registration:</strong>
+            22 September 2026 (AEST)
+            <span class="registration-countdown" id="nonauthor-registration-countdown"></span>
           </li>
         </ul>
       </section>
@@ -255,19 +239,23 @@
     <script src="./assets/js/base.js"></script>
     <script>
       (function () {
-        var el = document.getElementById("author-registration-countdown");
-        if (!el) return;
-        var now = new Date();
-        var target = new Date(2026, 7, 10); // 10 August 2026
-        target.setHours(23, 59, 59, 999);
-        var days = Math.ceil((target.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
-        if (days > 0) {
-          el.textContent = "(" + days + " day" + (days === 1 ? "" : "s") + " left)";
-        } else if (days === 0) {
-          el.textContent = "(today)";
-        } else {
-          el.textContent = "(deadline passed)";
+        function setCountdown(id, year, monthIndex, day) {
+          var el = document.getElementById(id);
+          if (!el) return;
+          var now = new Date();
+          var target = new Date(year, monthIndex, day);
+          target.setHours(23, 59, 59, 999);
+          var days = Math.ceil((target.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+          if (days > 0) {
+            el.textContent = "(" + days + " day" + (days === 1 ? "" : "s") + " left)";
+          } else if (days === 0) {
+            el.textContent = "(today)";
+          } else {
+            el.textContent = "(deadline passed)";
+          }
         }
+        setCountdown("author-registration-countdown", 2026, 7, 10); // 10 August 2026
+        setCountdown("nonauthor-registration-countdown", 2026, 8, 22); // 22 September 2026
       })();
     </script>
   </body>
