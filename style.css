@@ -270,12 +270,14 @@ body {
   padding: 0.35rem 0;
   min-width: 12rem;
   color: #333333 !important;
+  font-size: var(--ps-nav) !important;
 }
 
 .site-nav-dropdown-item,
 #site-nav .dropdown-item {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 1em;
+  font-family: "Times New Roman", Times, serif !important;
+  font-size: var(--ps-nav) !important;
+  line-height: 1.4 !important;
   color: #333333 !important;
   background-color: transparent !important;
   padding: 0.5rem 1.05rem;
