@@ -6,6 +6,18 @@
   user-select: none;
 }
 
+/* Keep a stable light academic palette across OS/browser dark modes */
+:root,
+html {
+  color-scheme: light only;
+}
+
+html,
+body {
+  background-color: #ffffff;
+  color: #212529;
+}
+
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
@@ -33,12 +45,64 @@
   fill: currentColor;
 }
 
-/* Wider page layout: use more of the screen than default Bootstrap container */
-.container {
-  width: 100%;
-  max-width: min(96vw, 1840px) !important;
-  padding-left: clamp(1rem, 2vw, 2rem);
-  padding-right: clamp(1rem, 2vw, 2rem);
+/* Full usable width: override Bootstrap's centered narrow breakpoints */
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: clamp(1rem, 2.5vw, 2.75rem) !important;
+  padding-right: clamp(1rem, 2.5vw, 2.75rem) !important;
+}
+
+@media (min-width: 576px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
+    max-width: 100% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .container,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
+    max-width: 100% !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .container,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
+    max-width: 100% !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container,
+  .container-xl,
+  .container-xxl {
+    max-width: 100% !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container,
+  .container-xxl {
+    max-width: 100% !important;
+  }
 }
 
 /* Site navigation */
@@ -47,7 +111,8 @@
   top: 0;
   z-index: 1030;
   width: 100%;
-  background: rgba(255, 255, 255, 0.96);
+  background: #ffffff;
+  color: #212529;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid #e3e3e3;
@@ -178,30 +243,38 @@
   border-bottom-color: #00264d !important;
 }
 
-.site-nav-dropdown-menu {
-  border: 1px solid #e3e3e3;
+.site-nav-dropdown-menu,
+#site-nav .dropdown-menu {
+  background-color: #ffffff !important;
+  border: 1px solid #e3e3e3 !important;
   border-radius: 0.4rem;
   box-shadow: 0 0.35rem 1rem rgba(0, 0, 0, 0.08);
   padding: 0.35rem 0;
   min-width: 12rem;
+  color: #333333 !important;
 }
 
-.site-nav-dropdown-item {
+.site-nav-dropdown-item,
+#site-nav .dropdown-item {
   font-family: "Times New Roman", Times, serif;
   font-size: 0.98rem;
-  color: #333333;
+  color: #333333 !important;
+  background-color: transparent !important;
   padding: 0.45rem 1rem;
 }
 
 .site-nav-dropdown-item:hover,
-.site-nav-dropdown-item:focus {
-  background-color: #f3f6f9;
-  color: #003366;
+.site-nav-dropdown-item:focus,
+#site-nav .dropdown-item:hover,
+#site-nav .dropdown-item:focus {
+  background-color: #f3f6f9 !important;
+  color: #003366 !important;
 }
 
-.site-nav-dropdown-item.active {
-  background-color: rgba(0, 51, 102, 0.1);
-  color: #003366;
+.site-nav-dropdown-item.active,
+#site-nav .dropdown-item.active {
+  background-color: rgba(0, 51, 102, 0.1) !important;
+  color: #003366 !important;
   font-weight: 600;
 }
 

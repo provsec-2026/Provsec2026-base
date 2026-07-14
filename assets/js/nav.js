@@ -64,7 +64,7 @@
     '<li><a class="dropdown-item site-nav-dropdown-item" href="keynotes.html" data-nav-page="keynotes.html" data-nav-group="people">Keynotes</a></li>' +
     '<li><a class="dropdown-item site-nav-dropdown-item" href="committee.html" data-nav-page="committee.html" data-nav-group="people">Committees</a></li>' +
     "</ul></div>" +
-    '<a class="site-nav-link site-nav-cta" href="registration.html" data-nav-page="registration.html" data-nav-group="register">Register</a>' +
+    '<a class="site-nav-link" href="registration.html" data-nav-page="registration.html" data-nav-group="register">Register</a>' +
     '<a class="site-nav-link" href="venue.html" data-nav-page="venue.html" data-nav-group="venue">Venue</a>' +
     '<a class="site-nav-link" href="program.html" data-nav-page="program.html" data-nav-group="program">Program</a>' +
     "</nav></div></div></div>";
