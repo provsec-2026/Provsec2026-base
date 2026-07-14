@@ -7,19 +7,20 @@
 }
 
 /* Keep a stable light academic palette across OS/browser dark modes */
-:root,
-html {
+:root {
   color-scheme: light only;
-  /* Fluid type scale: text grows with viewport on wide screens */
-  --ps-fs: clamp(1rem, 0.88rem + 0.45vw, 1.25rem);
-  --ps-nav: clamp(1.05rem, 0.92rem + 0.4vw, 1.35rem);
-  --ps-lead: clamp(1.05rem, 0.95rem + 0.35vw, 1.28rem);
-  --ps-h1: clamp(1.85rem, 1.25rem + 1.35vw, 2.85rem);
-  --ps-h2: clamp(1.35rem, 1.05rem + 0.75vw, 1.9rem);
-  --ps-h3: clamp(1.15rem, 0.98rem + 0.45vw, 1.45rem);
+  /* px-based fluid scale avoids rem circularity on html */
+  --ps-fs: clamp(16px, 0.28vw + 14.8px, 20px);
+  --ps-nav: clamp(1.05rem, 0.35vw + 0.9rem, 1.35rem);
+  --ps-lead: clamp(1.05rem, 0.3vw + 0.92rem, 1.3rem);
+  --ps-body: clamp(1rem, 0.25vw + 0.9rem, 1.2rem);
+  --ps-h1: clamp(1.85rem, 1.2vw + 1.2rem, 2.85rem);
+  --ps-h2: clamp(1.35rem, 0.7vw + 1.05rem, 1.9rem);
+  --ps-h3: clamp(1.15rem, 0.4vw + 0.98rem, 1.45rem);
 }
 
 html {
+  color-scheme: light only;
   font-size: var(--ps-fs);
 }
 
@@ -967,7 +968,7 @@ h5 {
 }
 
 .cfp-lead {
-  font-size: 1.08rem;
+  font-size: var(--ps-lead);
   line-height: 1.7;
   color: #333333;
   text-align: justify;
@@ -975,7 +976,7 @@ h5 {
 }
 
 .cfp-body {
-  font-size: 1rem;
+  font-size: var(--ps-body);
   line-height: 1.7;
   color: #444444;
   text-align: justify;
@@ -997,7 +998,7 @@ h5 {
 
 .cfp-topic-list,
 .cfp-dates-list {
-  font-size: 0.98rem;
+  font-size: var(--ps-body);
   line-height: 1.65;
   color: #444444;
   padding-left: 1.35rem;
@@ -1038,10 +1039,6 @@ h5 {
 
   .cfp-topic-list {
     columns: 1;
-  }
-
-  .cfp-page-title {
-    font-size: 1.65rem;
   }
 }
 
@@ -1093,7 +1090,7 @@ h5 {
   padding: 0.85rem 1.75rem;
   border-radius: 0.4rem;
   font-family: "Playfair Display", "Times New Roman", Times, serif;
-  font-size: 1.15rem;
+  font-size: var(--ps-h3);
   font-weight: 700;
   text-decoration: none;
   color: #ffffff;
@@ -1157,7 +1154,7 @@ h5 {
 }
 
 .registration-note {
-  font-size: 0.95rem;
+  font-size: 0.95em;
   color: #666666;
   margin-bottom: 1.25rem;
 }
@@ -1168,7 +1165,7 @@ h5 {
 }
 
 .registration-body {
-  font-size: 1rem;
+  font-size: var(--ps-body);
   line-height: 1.7;
   color: #444444;
   margin-bottom: 1rem;
@@ -1176,7 +1173,7 @@ h5 {
 
 .registration-disclaimer {
   margin-top: 1rem;
-  font-size: 0.92rem;
+  font-size: 0.95em;
   font-style: italic;
   color: #777777;
 }
@@ -1184,7 +1181,7 @@ h5 {
 .registration-fee-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 1rem;
+  font-size: var(--ps-body);
   color: #333333;
   margin-bottom: 0.5rem;
 }
@@ -1234,7 +1231,7 @@ h5 {
 
 .registration-includes-title {
   font-family: "Playfair Display", "Times New Roman", Times, serif;
-  font-size: 1.05rem;
+  font-size: var(--ps-h3);
   font-weight: 700;
   color: #003366;
   margin-bottom: 0.65rem;
@@ -1242,7 +1239,7 @@ h5 {
 
 .registration-dates-list,
 .registration-policy-list {
-  font-size: 1rem;
+  font-size: var(--ps-body);
   line-height: 1.7;
   color: #444444;
   padding-left: 1.35rem;
@@ -1280,10 +1277,6 @@ h5 {
   .registration-intro,
   .registration-panel {
     padding: 1.35rem 1.25rem;
-  }
-
-  .registration-page-title {
-    font-size: 1.65rem;
   }
 
   .registration-fee-table thead th,
@@ -1337,14 +1330,14 @@ h5 {
 }
 
 .venue-lead {
-  font-size: 1.08rem;
+  font-size: var(--ps-lead);
   line-height: 1.7;
   color: #333333;
   margin-bottom: 1.1rem;
 }
 
 .venue-body {
-  font-size: 1rem;
+  font-size: var(--ps-body);
   line-height: 1.7;
   color: #444444;
   margin-bottom: 1rem;
@@ -1487,10 +1480,6 @@ h5 {
 @media (max-width: 767.98px) {
   .venue-panel {
     padding: 1.35rem 1.25rem;
-  }
-
-  .venue-page-title {
-    font-size: 1.65rem;
   }
 
   .venue-info-table thead th,
