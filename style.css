@@ -1534,22 +1534,29 @@ h5 {
   }
 }
 
-.program-pdf-frame-wrap {
+.program-pages {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.program-page-figure {
+  margin: 0;
   border: 1px solid #e3e3e3;
   border-radius: 0.35rem;
   overflow: hidden;
   background-color: #ffffff;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.04);
 }
 
-.program-pdf-frame {
+.program-page-img {
   display: block;
   width: 100%;
-  min-height: 70vh;
-  border: 0;
+  height: auto;
 }
 
 @media (max-width: 767.98px) {
-  .program-pdf-frame {
-    min-height: 55vh;
+  .program-pages {
+    gap: 1rem;
   }
 }
