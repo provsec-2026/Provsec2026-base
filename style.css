@@ -1534,6 +1534,38 @@ h5 {
   }
 }
 
+.program-schedule-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.program-download-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.85rem;
+  border-radius: 0.3rem;
+  border: 1px solid #003366;
+  background-color: #003366;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.program-download-btn:hover {
+  color: #ffffff;
+  background-color: #004080;
+  border-color: #004080;
+}
+
 .program-pages {
   display: flex;
   flex-direction: column;
@@ -1556,6 +1588,11 @@ h5 {
 }
 
 @media (max-width: 767.98px) {
+  .program-schedule-header {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
   .program-pages {
     gap: 1rem;
   }
