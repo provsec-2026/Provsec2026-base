@@ -1533,3 +1533,23 @@ h5 {
     width: auto;
   }
 }
+
+.program-pdf-frame-wrap {
+  border: 1px solid #e3e3e3;
+  border-radius: 0.35rem;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.program-pdf-frame {
+  display: block;
+  width: 100%;
+  min-height: 70vh;
+  border: 0;
+}
+
+@media (max-width: 767.98px) {
+  .program-pdf-frame {
+    min-height: 55vh;
+  }
+}
