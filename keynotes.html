@@ -235,8 +235,10 @@
             </h2>
             <div id="olya_ohrimenko_talk_content" class="accordion-collapse collapse show" aria-labelledby="olya_ohrimenko_talk_heading" data-bs-parent="#olya_ohrimenko_talk">
               <div class="accordion-body">
-                <p class="keynote-talk-title">TBA</p>
-                <p><span class="fw-bold">Abstract</span>: TBA</p>
+                <p class="keynote-talk-title">Making AI Forget: From Verifiable Unlearning to Behavioural Suppression</p>
+                <p><span class="fw-bold">Abstract</span>: Modern AI systems learn from enormous amounts of data, including information that may later need to be removed. This has motivated growing interest in machine unlearning: techniques that aim to make a trained model forget selected data without retraining from scratch. But what does it actually mean for a model to forget, and how can we tell whether forgetting has really occurred?</p>
+                <p>In this talk, I will examine these questions from two complementary perspectives. First, I will show why observing a model&rsquo;s parameters or behaviour is insufficient to establish that data has been removed. I will present an approach that instead treats unlearning as a security problem, enabling users to verify through cryptographic proofs that an agreed-upon unlearning process has been correctly executed. Second, I will turn to large language models, where even determining whether information has been forgotten becomes surprisingly subtle. Through multilingual unlearning, we find that information apparently removed in one language may remain accessible through others, and that much of this &ldquo;forgotten&rdquo; knowledge can be recovered by manipulating internal model representations.</p>
+                <p>Together, these results highlight a fundamental distinction between making information harder to observe and actually removing it. I will discuss what this distinction means for the design, evaluation, and verification of future AI systems&mdash;and what it may take to make meaningful claims that an AI system has truly forgotten.</p>
               </div>
             </div>
           </div>
